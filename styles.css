@@ -1,0 +1,20 @@
+/* Estilize conforme necessário */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .corrida {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  

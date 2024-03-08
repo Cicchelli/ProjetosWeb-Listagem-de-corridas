@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upcoming Races Near Pouso Alegre, MG</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        tr:hover {background-color: #f5f5f5;}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corridas Próximas a Pouso Alegre, MG</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Upcoming Races Near Pouso Alegre, MG</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Race</th>
-                <th>Date</th>
-                <th>Location</th>
-                <th>Website</th>
-            </tr>
-        </thead>
-        <tbody id="race-list">
-        </tbody>
-    </table>
-    <script src="scraper.js"></script>
+  <h1>Corridas Próximas a Pouso Alegre, MG</h1>
+
+  <div id="filters" class="filters">
+    <label for="dataInicio">Data Início:</label>
+    <input type="date" id="dataInicio">
+    <label for="dataFim">Data Fim:</label>
+    <input type="date" id="dataFim">
+    <label for="distancia">Distância:</label>
+    <select id="distancia">
+      <option value="">Todas</option>
+      <option value="5km">5km</option>
+      <option value="10km">10km</option>
+      <option value="21km">21km</option>
+      <option value="42km">42km</option>
+    </select>
+    <label for="tipo">Tipo:</label>
+    <select id="tipo">
+      <option value="">Todos</option>
+      <option value="Rua">Rua</option>
+      <option value="Trail">Trail</option>
+    </select>
+    <label for="local">Local:</label>
+    <input type="text" id="local">
+    <button onclick="filtrarCorridas()">Filtrar</button>
+  </div>
+
+  <div id="corridas"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
